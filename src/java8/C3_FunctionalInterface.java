@@ -25,9 +25,7 @@ public class C3_FunctionalInterface {
 		fit.display();// outputs: Display from old way
 
 		// Using lambda expression
-		FunctionalInterfaceTest newWay = () -> {
-			System.out.println("Display from new Lambda Expression");
-		};
+		FunctionalInterfaceTest newWay = () -> System.out.println("Display from new Lambda Expression");
 		newWay.display();// outputs : Display from new Lambda Expression
 		
 		
