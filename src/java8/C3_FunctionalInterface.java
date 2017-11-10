@@ -39,3 +39,8 @@ public class C3_FunctionalInterface {
 	}
 
 }
+
+// article
+// https://javabrains.io/courses/java_lambdabasics/
+
+
