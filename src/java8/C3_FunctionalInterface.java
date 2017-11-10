@@ -35,7 +35,12 @@ public class C3_FunctionalInterface {
 		Processor stringProcessor = (String str) -> str.length();
 	    String name = "Java Lambda";
 	    int length = stringProcessor.getStringLength(name);
+	    
+	    //single line
+	    int length2 = ((Processor) (String str) -> str.length()).getStringLength("Java Lambda");
+
 	    System.out.println(length);
+	    System.out.println(length2);
 	}
 
 }
