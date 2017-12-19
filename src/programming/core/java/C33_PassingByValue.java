@@ -19,6 +19,7 @@ public class C33_PassingByValue {
 
 		Human human = new Human("Bob");
 		System.out.println("1. Human is: " + human);
+		System.out.println("1. Human is: " + human.hashCode());
 
 		app.show(human);
 
@@ -35,11 +36,14 @@ public class C33_PassingByValue {
 
 	public void show(Human human) {
 		System.out.println("2. Human is: " + human);
+		System.out.println("2. Human is: " + human.hashCode());
+		human.setName("SJ");
 
 		human = new Human("Mike");
 		human.setName("Sue");
 
 		System.out.println("3. Human is: " + human);
+		System.out.println("3. Human is: " + human.hashCode());
 
 	}
 }

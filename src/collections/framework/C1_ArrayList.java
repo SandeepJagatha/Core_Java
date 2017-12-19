@@ -12,6 +12,8 @@ public class C1_ArrayList {
 		numbers.add(10);
 		numbers.add(100);
 		numbers.add(40);
+		numbers.add(5);
+		numbers.add(5);
 
 		// Retrieving
 		System.out.println(numbers.get(0));
@@ -27,6 +29,8 @@ public class C1_ArrayList {
 
 		// This is VERY slow
 		numbers.remove(0);
+		numbers.remove(new Integer(5)); // removes the first Integer object that
+										// is equal to the 5
 
 		System.out.println("nIteration #2: ");
 		for (Integer value : numbers) {
@@ -35,8 +39,18 @@ public class C1_ArrayList {
 
 		// List interface ...
 		List<String> values = new ArrayList<String>();
+
+		for (int x = 0; x <= 100; x++) {
+			if (x % 3 == 0) {
+				System.out.println("F");
+			}
+			if (x % 5 == 0) {
+				System.out.println("B");
+			}
+			if (x % 15 == 0) {
+				System.out.println("FB");
+			}
+		}
 	}
 
 }
-
-

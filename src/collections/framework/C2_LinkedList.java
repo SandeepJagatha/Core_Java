@@ -1,6 +1,7 @@
 package collections.framework;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -18,8 +19,21 @@ public class C2_LinkedList {
 		 */
 		List<Integer> linkedList = new LinkedList<Integer>();
 
+		//doTimings adds 200000 items
 		doTimings("ArrayList", arrayList); // Time taken: 2858 ms for ArrayList
 		doTimings("LinkedList", linkedList); // Time taken: 6 ms for LinkedList
+		
+		System.out.println(linkedList.size()); //200000
+		System.out.println(arrayList.size()); //200000
+		
+		for(Iterator<Integer> iter = linkedList.iterator(); iter.hasNext();) {
+		    int data = iter.next();
+		    if (data == 25815) {
+			    System.out.println(data);
+		        iter.remove();
+		        break;
+		    }
+		}
 	}
 
 	private static void doTimings(String type, List<Integer> list) {
